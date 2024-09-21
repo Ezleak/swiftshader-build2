@@ -12,7 +12,7 @@ env:
 jobs:
    ubuntu-gles:
      name: GLES
-     runs-on: ubuntu-24.04
+     runs-on: ubuntu-22.04
      strategy:
        matrix:
          # On 16.04 it uses GCC 5, not GCC 4.8, because it can't build on that
