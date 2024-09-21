@@ -53,8 +53,6 @@ jobs:
          ninja -C build
          install -dm755 install/lib
          install -m755 -t install/lib \
-           build/libEGL.so \
-           build/libGLESv2.so \
            build/libvk_swiftshader.so
          install -dm755 install/share/vulkan/icd.d/
          install -m644 -t install/share/vulkan/icd.d/ \
