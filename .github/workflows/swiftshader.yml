@@ -5,7 +5,7 @@ on: [push, pull_request]
 env:
   # Ideally use a commit that's verified to work well elsewhere (Arch
   # swiftshader-git package, for example)
-  COMMIT: Ib9afeb3e3899f8e20ebd1e4d7e01b46f721684a7
+  COMMIT: 2afc8c9
 
 # Mostly just copied from here, with ES1 disabled:
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=swiftshader-git
