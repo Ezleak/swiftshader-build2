@@ -12,7 +12,7 @@ env:
 jobs:
    ubuntu-gles:
      name: GLES
-     runs-on: ubuntu-22.04
+     runs-on: ubuntu-20.04
      strategy:
        matrix:
          # On 16.04 it uses GCC 5, not GCC 4.8, because it can't build on that
@@ -61,7 +61,7 @@ jobs:
          sed 's#./libvk_swiftshader.so#../../../lib/libvk_swiftshader.so#' \
            -i install/share/vulkan/icd.d/7997cbc34bb2d5db771f0d0b2497aeb665168ed2
      - name: Upload Release artifacts
-       uses: actions/upload-artifact@v2
+       uses: actions/upload-artifact@v1
        with:
          name: swiftshader-gles-${{ env.SWIFTSHADER_VERSION }}-${{ matrix.os }}
          path: install
