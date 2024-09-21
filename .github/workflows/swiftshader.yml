@@ -54,11 +54,6 @@ jobs:
          install -dm755 install/lib
          install -m755 -t install/lib \
            build/libvk_swiftshader.so
-         install -dm755 install/share/vulkan/icd.d/
-         install -m644 -t install/share/vulkan/icd.d/ \
-           build/Linux/vk_swiftshader_icd.json
-         sed 's#./libvk_swiftshader.so#../../../lib/libvk_swiftshader.so#' \
-           -i install/share/vulkan/icd.d/7997cbc34bb2d5db771f0d0b2497aeb665168ed2
      - name: Upload Release artifacts
        uses: actions/upload-artifact@v3
        with:
